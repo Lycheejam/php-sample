@@ -6,10 +6,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./src/:/var/phpapp/
       - ./docker-configs/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-    links:
-      - php
   php:
     image: php:7-fpm
     volumes:
